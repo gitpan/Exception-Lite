@@ -3,4 +3,5 @@ lib/Exception/Lite.pm
 lib/Exception/Lite.pod
 MANIFEST			This list of files
 t/Exception/Lite.t
+Makefile.PL
 META.yml

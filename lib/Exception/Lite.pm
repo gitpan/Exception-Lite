@@ -259,7 +259,10 @@ sub _cacheCall {
 
   # caller populates @DB::args if called within DB package
   eval {
-    package DB;
+    # this 2 line wierdness is needed to prevent Module::Build from finding
+    # this and adding it to the provides list.
+    package
+      DB;
 
     #get rid of eval and call to _cacheCall
     @aCaller = caller($iFrame+2);

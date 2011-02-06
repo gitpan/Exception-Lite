@@ -15,8 +15,8 @@ my $builder = Module::Build
          , requires => {'perl' => '>= 5.8.8'}
 
          , dist_author => 'Elizabeth Grace Frank-Backman'
-         , dist_version => '0.999_001'
-         
+         , dist_version => '0.999_002'
+         , dist_abstract => 'light weight exception handling class with smart stack tracing, chaining, and localization support'
          , create_makefile_pl => 'traditional'
 
        );
