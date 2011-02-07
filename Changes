@@ -1,0 +1,14 @@
+Revision history for Exception-Lite-0.999_003
+
+0.999_003 2011-02-07
+
+    - removed unnecessary and unintended thread dependencies
+
+0.999_002 2011-02-05
+
+    - removed bogus "provides" statements
+
+0.999_001 2011-02-05
+
+    - initial release
+

@@ -1,7 +1,9 @@
 Build.PL
+Changes
 lib/Exception/Lite.pm
 lib/Exception/Lite.pod
 MANIFEST			This list of files
+script/Exception/Lite/Horton_Demo.pl
 t/Exception/Lite.t
 Makefile.PL
 META.yml

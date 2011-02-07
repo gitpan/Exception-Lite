@@ -121,7 +121,10 @@ sub declareExceptionClass {
     $sMakeMsg='';
   }
 
-  my $sTid = defined(&threads::tid)?'threads->tid':'undef';
+  # put this in an eval so that it doesn't cause parse errors at
+  # compile time in no-threads versions of Perl
+
+  my $sTid = eval q{defined(&threads::tid)?'threads->tid':'undef'};
 
   my $sDeclare = "package $sClass;".
     'sub new { my $cl=shift;'.  $sLeadingParams .
