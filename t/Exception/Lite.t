@@ -292,8 +292,15 @@ sub testWarningsAndExceptions {
     like($sWarn, qr{added an unnecessary message}, $sTest);
 
     # format string with too many placeholders
+    # This feature relies on our knowing in advance the warnings
+    # spewed by sprintf in different Perl releases. It may fail
+    # on newer releases if the list of sought for messages is
+    # not updated for newer releases (updates should be placed in
+    # _sprintf in Exception/Lite.pm)
+
     $sTest="$sContext: Verifying warning for class "
-         ."definition with too many placeholders in format string";
+         ."definition with missing args/too many placeholders "
+         ."in format string";
     $sWarn=undef;
     $sExceptionClass->new(a => 'x');
     like($sWarn, qr{too many placeholders}, $sTest);

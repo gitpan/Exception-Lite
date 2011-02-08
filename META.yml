@@ -1,6 +1,6 @@
 ---
 name: Exception-Lite
-version: 0.999_003
+version: 0.999_004
 author:
   - Elizabeth Grace Frank-Backman
 abstract: 'light weight exception handling class with smart stack tracing, chaining, and localization support'

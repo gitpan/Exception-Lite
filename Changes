@@ -1,6 +1,11 @@
-Revision history for Exception-Lite-0.999_003
+Revision history for Exception-Lite-0.999_004
 
-0.999_003 2011-02-07
+0.999_004 2011-02-08
+
+    - updated warning type detection code to take into account change
+      in sprintf warnings starting with 5.12
+
+0.999_003 2010-02-07
 
     - removed unnecessary and unintended thread dependencies
 

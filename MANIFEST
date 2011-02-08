@@ -3,6 +3,7 @@ Changes
 lib/Exception/Lite.pm
 lib/Exception/Lite.pod
 MANIFEST			This list of files
+MANIFEST.SKIP
 script/Exception/Lite/Horton_Demo.pl
 t/Exception/Lite.t
 Makefile.PL

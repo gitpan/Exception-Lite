@@ -488,12 +488,14 @@ sub _sprintf {
     $s =~ s/::(\w+)\z/->$1/;
     $sWarn =~ s/sprintf/$s/;
     $sWarn =~ s/\s+at\s+[\w\/\.]+\s+line\s+\d+\.\s+\z//;
-    if ($sWarn =~ m{^Use of uninitialized value in}) {
+    if ($sWarn
+        =~ m{^Use of uninitialized value in|^Missing argument}) {
       my $p=$s; $p =~ s/->\w+\z//;
       $sReason ="\n     Most likely cause: "
-        . "Exception class <$p> has an improper format definition: "
-        . 'The format string has too many placeholders (e.g. %s) '
-        . "given the property list that was provided.\n";
+        . "Either you are missing property-value pairs needed to"
+        . "build the message or your exception class's format"
+        . "definition mistakenly has too many placeholders "
+        . "(e.g. %s,%d,etc)\n";
     }
     warn "$sWarn called at file $f, line $l$sReason\n";
   }
